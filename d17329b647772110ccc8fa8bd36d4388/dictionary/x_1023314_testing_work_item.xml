@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="c4e3a93e47772110ccc8fa8bd36d4355" label="Work Item" max_length="40" name="x_1023314_testing_work_item" type="collection">
+        <element label="List of Values" max_length="40" name="list_of_values" type="string"/>
+        <element label="Name" max_length="40" name="name" type="string"/>
+        <element label="Parent id" max_length="32" name="parent_id" reference="x_1023314_testing_request_task" type="reference"/>
+        <element label="Reference to x_1023314_testing_subtable1" max_length="40" name="reference_to_x_1023314_testing_subtable1" reference="x_1023314_testing_subtable1" type="reference"/>
+        <element label="Reference to x_1023314_testing_subtable2" max_length="40" name="reference_to_x_1023314_testing_subtable2" reference="x_1023314_testing_subtable2" type="reference"/>
+        <element label="Reference to x_1023314_testing_subtable3" max_length="40" name="reference_to_x_1023314_testing_subtable3" reference="x_1023314_testing_subtable3" type="reference"/>
+        <element attributes="ref_contributions=x_1023314_testing_show email button" choice="1" label="State" max_length="40" name="state" type="integer">
+            <choice>
+                <element inactive_on_update="false" label="State 1" value="1"/>
+                <element inactive_on_update="false" label="State 2" value="2"/>
+            </choice>
+        </element>
+        <element label="Value" max_length="40" name="value" type="string"/>
+        <index name="index">
+            <element name="parent_id"/>
+        </index>
+    </element>
+</database>

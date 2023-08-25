@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_1023314_testing.migrage_and_delete_customTable</api_name>
+        <caller_access>1</caller_access>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>migrage_and_delete_customTable</name>
+        <script><![CDATA[var migrage_and_delete_customTable = Class.create();
+//var md = new x_1023314_testing.migrage_and_delete_customTable();
+
+//md.cleanuptables();
+//md.insertDataIntoOriginalTable();
+//md.migrateData();
+migrage_and_delete_customTable.prototype = {
+    initialize: function() {
+        this.originalTable = 'x_1023314_testing_work_item';
+        this.subtables = ['x_1023314_testing_subtable1', 'x_1023314_testing_subtable2', 'x_1023314_testing_subtable3'];
+    },
+    createColumns_25_to_100: function() {
+        for (var i = 25; i <= 100; i++) {
+            var field = new GlideRecord('sys_dictionary');
+            field.initialize();
+            field.name = 'x_1023314_testing_work_item';
+            field.type = 'string'; // field type
+            field.column_label = 'Custom Field ' + i;
+            field.element = 'u_custom_field_' + i;
+            field.addUnique = true;
+            field.insert();
+        }
+
+        gs.info('100 new string fields have been created');
+
+    },
+    cleanuptables: function() {
+        var originalTable = new GlideRecord(this.originalTable);
+        originalTable.query();
+        while (originalTable.next()) {
+            originalTable.deleteRecord();
+        }
+        //originalTable.update();
+
+        for (var i = 0; i < this.subtables.length; i++) {
+            var subtable = new GlideRecord(this.subtables[i]);
+            subtable.query();
+            while (subtable.next()) {
+                subtable.deleteRecord();
+            }
+            //subtable.update();
+        }
+    },
+    insertDataIntoOriginalTable: function() {
+
+        for (var j = 1; j <= 100; j++) {
+			var originalTable = new GlideRecord(this.originalTable);
+            originalTable.initialize();
+            for (var i = 1; i <= 100; i++) {
+                var fieldName = 'u_custom_field_' + i;
+                originalTable.setValue(fieldName, 'Sample Data ' + j + ' - ' + i);
+            }
+            originalTable.name = 'Sample Date ' + j;
+            originalTable.insert();
+        }
+    },
+
+    migrateData: function() {
+
+        var grWorkItem = new GlideRecord(this.originalTable);
+        grWorkItem.query();
+
+        while (grWorkItem.next()) {
+            for (var t = 0; t < this.subtables.length; t++) {
+                var newTable = new GlideRecord(this.subtables[t]);
+                newTable.initialize();
+                newTable.reference_to_x_1023314_testing_work_item = grWorkItem.sys_id;
+                for (var i = 25 * (t+1); i < 25 * (t + 2); i++) {
+                    var fieldName = 'custom_field_' + (i);
+                    newTable.setValue(fieldName, grWorkItem.getValue('u_' + fieldName));
+                }
+
+                var newRecordSysId = newTable.insert();
+
+                var referenceFieldName = 'reference_to_' + this.subtables[t];
+                grWorkItem.setValue(referenceFieldName, newRecordSysId);
+            }
+            grWorkItem.update();
+        }
+
+        gs.info('Data has been migrated and reference fields have been updated');
+    },
+
+    deleteColumnsFromOriginalTable: function() {
+        for (var i = 25; i < 100; i++) {
+            var fieldName = 'u_custom_field_' + i;
+
+            var dictGR = new GlideRecord('sys_dictionary');
+            dictGR.addQuery('name', 'x_1023314_testing_work_item');
+            dictGR.addQuery('element', fieldName);
+            dictGR.query();
+
+            if (dictGR.next()) {
+                dictGR.deleteRecord();
+                gs.info('Field ' + fieldName + ' has been deleted from ' + 'x_1023314_testing_work_item');
+            } else {
+                gs.warn('Field ' + fieldName + ' not found in ' + 'x_1023314_testing_work_item');
+            }
+        }
+    },
+    type: 'migrage_and_delete_customTable'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-08-18 03:14:13</sys_created_on>
+        <sys_id>d1c033d447bc3110ccc8fa8bd36d43c6</sys_id>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_name>migrage_and_delete_customTable</sys_name>
+        <sys_package display_value="testing" source="x_1023314_testing">d17329b647772110ccc8fa8bd36d4388</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="testing">d17329b647772110ccc8fa8bd36d4388</sys_scope>
+        <sys_update_name>sys_script_include_d1c033d447bc3110ccc8fa8bd36d43c6</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-08-18 03:50:46</sys_updated_on>
+    </sys_script_include>
+</record_update>

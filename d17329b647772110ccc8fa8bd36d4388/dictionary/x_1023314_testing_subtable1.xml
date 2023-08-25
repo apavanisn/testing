@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="ed34dbd4473c3110ccc8fa8bd36d4312" label="subtable1" max_length="40" name="x_1023314_testing_subtable1" type="collection">
+        <element label="Custom Field 25" max_length="40" name="custom_field_25" type="string"/>
+        <element label="Custom Field 26" max_length="40" name="custom_field_26" type="string"/>
+        <element label="Custom Field 27" max_length="40" name="custom_field_27" type="string"/>
+        <element label="Custom Field 28" max_length="40" name="custom_field_28" type="string"/>
+        <element label="Custom Field 29" max_length="40" name="custom_field_29" type="string"/>
+        <element label="Custom Field 30" max_length="40" name="custom_field_30" type="string"/>
+        <element label="Custom Field 31" max_length="40" name="custom_field_31" type="string"/>
+        <element label="Custom Field 32" max_length="40" name="custom_field_32" type="string"/>
+        <element label="Custom Field 33" max_length="40" name="custom_field_33" type="string"/>
+        <element label="Custom Field 34" max_length="40" name="custom_field_34" type="string"/>
+        <element label="Custom Field 35" max_length="40" name="custom_field_35" type="string"/>
+        <element label="Custom Field 36" max_length="40" name="custom_field_36" type="string"/>
+        <element label="Custom Field 37" max_length="40" name="custom_field_37" type="string"/>
+        <element label="Custom Field 38" max_length="40" name="custom_field_38" type="string"/>
+        <element label="Custom Field 39" max_length="40" name="custom_field_39" type="string"/>
+        <element label="Custom Field 40" max_length="40" name="custom_field_40" type="string"/>
+        <element label="Custom Field 41" max_length="40" name="custom_field_41" type="string"/>
+        <element label="Custom Field 42" max_length="40" name="custom_field_42" type="string"/>
+        <element label="Custom Field 43" max_length="40" name="custom_field_43" type="string"/>
+        <element label="Custom Field 44" max_length="40" name="custom_field_44" type="string"/>
+        <element label="Custom Field 45" max_length="40" name="custom_field_45" type="string"/>
+        <element label="Custom Field 46" max_length="40" name="custom_field_46" type="string"/>
+        <element label="Custom Field 47" max_length="40" name="custom_field_47" type="string"/>
+        <element label="Custom Field 48" max_length="40" name="custom_field_48" type="string"/>
+        <element label="Custom Field 49" max_length="40" name="custom_field_49" type="string"/>
+        <element label="Reference to x_1023314_testing_work_item" max_length="40" name="reference_to_x_1023314_testing_work_item" reference="x_1023314_testing_work_item" type="reference"/>
+    </element>
+</database>

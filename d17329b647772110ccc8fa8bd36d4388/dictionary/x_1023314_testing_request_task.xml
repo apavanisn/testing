@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="email_client=true" db_object_id="4193e93e47772110ccc8fa8bd36d432f" extends="task" label="Request Task" max_length="40" name="x_1023314_testing_request_task" type="collection">
+        <element label="WorkItem Id" max_length="32" name="workitem_id" reference="x_1023314_testing_work_item" type="reference"/>
+    </element>
+</database>

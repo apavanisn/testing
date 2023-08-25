@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_form_sections form_id="c6c7257247b72110ccc8fa8bd36d4366" sys_domain="global" table="x_1023314_testing_request_task" version="3">
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>0</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-07-06 18:37:33</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>0ec7257247b72110ccc8fa8bd36d4367</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_1023314_testing_request_task" name="x_1023314_testing_request_task" sys_domain="global" view="Default view">c6c7257247b72110ccc8fa8bd36d4366</sys_ui_form>
+            <sys_ui_section caption="NULL" display_value="" name="x_1023314_testing_request_task" sys_domain="global" view="Default view">cb26217e47772110ccc8fa8bd36d43a3</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-07-06 18:37:33</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>1</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-07-06 18:37:33</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>46c7257247b72110ccc8fa8bd36d4369</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_1023314_testing_request_task" name="x_1023314_testing_request_task" sys_domain="global" view="Default view">c6c7257247b72110ccc8fa8bd36d4366</sys_ui_form>
+            <sys_ui_section caption="WorkItem" display_value="WorkItem" name="x_1023314_testing_request_task" sys_domain="global" view="Default view">46c7257247b72110ccc8fa8bd36d4368</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-07-06 18:37:33</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form action="INSERT_OR_UPDATE">
+            <name>x_1023314_testing_request_task</name>
+            <roles/>
+            <sys_class_name>sys_ui_form</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-07-06 18:37:33</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>c6c7257247b72110ccc8fa8bd36d4366</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_1023314_testing_request_task</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="testing" source="x_1023314_testing">d17329b647772110ccc8fa8bd36d4388</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="testing">d17329b647772110ccc8fa8bd36d4388</sys_scope>
+            <sys_update_name>sys_ui_form_sections_c6c7257247b72110ccc8fa8bd36d4366</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-07-06 18:37:33</sys_updated_on>
+            <sys_user/>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_form>
+    </sys_ui_form_sections>
+</record_update>
